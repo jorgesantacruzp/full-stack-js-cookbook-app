@@ -60,8 +60,10 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-app.listen(666, function () {
-  console.log('Example app listening on port 666!');
+var port = process.env.PORT || 666;
+
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port);
 });
 
 
