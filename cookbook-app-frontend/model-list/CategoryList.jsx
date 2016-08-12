@@ -1,7 +1,7 @@
 import React from 'react'
-import BookRow from '../model-row/BookRow.jsx'
+import CategoryRow from '../model-row/CategoryRow.jsx'
 
-class BookList extends React.Component {
+class CategoryList extends React.Component {
 
   render() {
     return (
@@ -9,7 +9,7 @@ class BookList extends React.Component {
         <ul className="media-list">
           {
             this.props.listado.map((book, i) => {
-              return <BookRow key={i} id={ book.id }
+              return <CategoryRow key={i} id={ book.id }
                                   name={ book.name }
                                   full_name={ book.full_name } />
             })
@@ -20,4 +20,4 @@ class BookList extends React.Component {
   }
 }
 
-export default BookList
+export default CategoryList

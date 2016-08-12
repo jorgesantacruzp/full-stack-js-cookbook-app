@@ -1,26 +1,26 @@
 import React from 'react';
-import BookList from './model-list/BookList.jsx';
+import CategoryList from './model-list/CategoryList.jsx';
 
 class App extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            empleados: []
+            categories: []
         }
     }
     componentWillMount() {
-        fetch('https://api.github.com/users/mralexgray/repos').then((response) => {
+        fetch('http://localhost:8000/api/categories').then((response) => {
             return response.json()
-        }).then((empleados) => {
-            this.setState({empleados: empleados})
+        }).then((categories) => {
+            this.setState({categories: categories.data})
         })
     }
     render() {
-        if (this.state.empleados.length > 0) {
+        if (this.state.categories.length > 0) {
             return (
                 <div>
-                    <BookList listado={this.state.empleados}/>
+                    <CategoryList listado={this.state.categories}/>
                 </div>
             )
         } else {

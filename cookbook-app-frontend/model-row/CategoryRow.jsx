@@ -1,6 +1,6 @@
 import React from 'react'
 
-class BookRow extends React.Component {
+class CategoryRow extends React.Component {
 
   render() {
     return(
@@ -18,4 +18,4 @@ class BookRow extends React.Component {
   }
 }
 
-export default BookRow
+export default CategoryRow
