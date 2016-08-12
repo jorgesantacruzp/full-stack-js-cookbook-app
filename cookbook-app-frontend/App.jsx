@@ -1,6 +1,14 @@
 import React from 'react';
 import CategoryList from './model-list/CategoryList.jsx';
 
+import TextFieldFirstExample from './components/TextFieldFirstExample.jsx'
+
+//import injectTapEventPlugin from 'react-tap-event-plugin';
+
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+//injectTapEventPlugin();
+
 class App extends React.Component {
 
     constructor(props) {
@@ -20,6 +28,7 @@ class App extends React.Component {
         if (this.state.categories.length > 0) {
             return (
                 <div>
+                    <TextFieldFirstExample/>
                     <CategoryList listado={this.state.categories}/>
                 </div>
             )

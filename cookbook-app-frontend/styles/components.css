@@ -1,0 +1,10 @@
+.labelCambioReferencial {
+  margin-top: 8px;
+}
+#btnLimpiar {
+  margin-bottom: 10px;
+}
+#divNoResultados>div {
+  font-size: 12px;
+  margin-top: 3px !important;
+}

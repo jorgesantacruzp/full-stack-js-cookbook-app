@@ -7,10 +7,9 @@ class CategoryRow extends React.Component {
       <li className="media">
         <div className="media-body">
           <h4>{this.props.id}</h4>
-          <p>
+          <a href="">
             {this.props.name} &nbsp;
-            <span className="label label-info">{this.props.full_name}</span>
-          </p>
+          </a>
         </div>
         <hr/>
       </li>
