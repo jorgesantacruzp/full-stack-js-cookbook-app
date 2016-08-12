@@ -7,6 +7,6 @@ var db = require('../queries');
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-router.get('/api/puppies', db.getAllPuppies);
+router.get('/api/categories', db.getRecipeCategories);
 
 module.exports = router;
