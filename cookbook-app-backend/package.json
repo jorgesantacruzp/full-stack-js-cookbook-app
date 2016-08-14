@@ -1,21 +1,32 @@
 {
-  "name": "cookbook-app-backend",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "bluebird": "^3.3.4",
-    "body-parser": "~1.15.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.2.0",
-    "express": "^4.13.4",
-    "gulp": "^3.9.1",
-    "gulp-nodemon": "^2.1.0",
-    "jade": "~1.11.0",
-    "morgan": "~1.7.0",
-    "pg-promise": "^3.2.3",
-    "serve-favicon": "~2.3.0"
-  }
+    "name": "projectnodegulpbabel",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./app/index.js"
+    },
+    "author": "Jorge Santa Cruz Portocarrero",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.11.4",
+        "babel-preset-es2015-node5": "^1.2.0",
+        "babel-preset-stage-0": "^6.5.0",
+        "gulp": "^3.9.1",
+        "gulp-live-server": "0.0.30",
+        "gulp-shell": "^0.5.2",
+        "gulp-watch": "^4.3.9",
+        "mkdirp": "^0.5.1",
+        "rimraf": "^2.5.4",
+        "run-sequence": "^1.2.2"
+    },
+    "dependencies": {
+        "body-parser": "^1.15.2",
+        "express": "^4.14.0",
+        "morgan": "^1.7.0",
+        "multer": "^1.2.0",
+        "bluebird": "^3.3.4",
+        "pg-promise": "^3.2.3",
+        "mongoose": "^4.5.8"
+    }
 }
