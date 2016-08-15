@@ -8,7 +8,7 @@ class TextFieldFirstExample extends React.Component {
     render() {
         return (
             <div>
-                <TextField floatingLabelText="Placeholder"/>
+                <TextField floatingLabelText={this.props.placeholder}}/>
             </div>
         );
     }

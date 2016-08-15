@@ -18,7 +18,8 @@ const styles = {
         marginBottom: 24
     },
     subHeaderSize:{
-      fontSize: 40
+      fontSize: 40,
+      color:'hsl(0, 0%, 100%)'
     }
 };
 
@@ -28,7 +29,7 @@ class CustomGridList extends React.Component {
         return (
             <div style={styles.root}>
                 <GridList cellHeight={200} style={styles.gridList}>
-                    <Subheader style={styles.subHeaderSize}>Categories</Subheader>
+                    <Subheader style={styles.subHeaderSize}>{this.props.title}</Subheader>
                     {this.props.listado.map((tile) => (
                         <GridTile key={tile.id} title={tile.name}
                             actionIcon={

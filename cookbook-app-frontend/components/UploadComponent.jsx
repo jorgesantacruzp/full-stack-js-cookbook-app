@@ -18,7 +18,7 @@ class UploadComponent extends React.Component {
         }
         return (
             <div>
-                <FlatButton label="Choose an Image" primary={true}>
+                <FlatButton label={this.props.message} primary={true}>
                     <input id="imageButton" style={styles.exampleImageInput} type="file"></input>
                 </FlatButton>
             </div>
