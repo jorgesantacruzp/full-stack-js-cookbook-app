@@ -5,24 +5,6 @@ import CustomAppBar from './components/CustomAppBar.jsx';
 
 class App extends React.Component {
 
-    /*{
-      "id": 1,
-      "name": "Pastas",
-      "img": '../images/grid-list/pastas.jpg'
-  }, {
-      "id": 2,
-      "name": "Salads",
-      "img": '../images/grid-list/salads.jpg'
-  }, {
-      "id": 3,
-      "name": "Meat",
-      "img": '../images/grid-list/meat.jpg'
-  }, {
-      "id": 4,
-      "name": "Desserts",
-      "img": '../images/grid-list/desserts.jpg'
-  }*/
-
     constructor(props) {
         super(props)
         this.state = {
