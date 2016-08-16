@@ -1,71 +1,18 @@
-import React from 'react';
-
-import CustomGridList from './components/GridList.jsx';
-import CustomAppBar from './components/CustomAppBar.jsx';
+import React, {PropTypes} from 'react';
+import {Link} from 'react-router';
 
 class App extends React.Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            categories: [],
-            appTitle: "Recipes",
-            gridTitle: "Categories",
-            open: false,
-            menuOptions: [
-                {
-                    "action": "Add",
-                    "message": "You're gonna add"
-                }, {
-                    "action": "Delete",
-                    "message": "You're gonna delete"
-                }
-            ]
-        }
-    }
-
-    componentWillMount() {
-        const addPathImage = array => array.map(item => {
-            return {
-                ...item,
-                img: '../images/grid-list/' + item.name.toLowerCase() + '.jpg'
-            }
-        });
-
-        fetch('http://localhost:3000/cookbook/categories').then((response) => {
-            return response.json()
-        }).then((categories) => {
-            this.setState({
-                categories: addPathImage(categories.data)
-            })
-        })
-    }
-
-    handleClick = () => this.setState({
-        open: !this.state.open
-    });
-    handleClose = () => this.setState({open: false});
-
     render() {
-        let styles = {
-            appBarStyle: {
-                backgroundColor: '#F44336'
-            }
-        };
-
-        if (this.state.categories.length > 0) {
-            return (
-                <div>
-                    <CustomAppBar title={this.state.appTitle} options={this.state.menuOptions}/>
-                    <CustomGridList listado={this.state.categories} title={this.state.gridTitle}/>
-                </div>
-            )
-        } else {
-            return <p>Loading</p>
-        }
-
+        return (
+            <div>
+                {this.props.children}
+            </div>
+        );
     }
-
 }
+
+App.propTypes = {
+    children: PropTypes.object.isRequired
+};
 
 export default App;

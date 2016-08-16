@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.jsx';
+
+import {Router, browserHistory} from 'react-router';
+import routes from './routes';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -8,7 +10,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const CustomApp = () => (
   <MuiThemeProvider>
-    <App />
+    <Router history={browserHistory} routes={routes}/>
   </MuiThemeProvider>
 );
 

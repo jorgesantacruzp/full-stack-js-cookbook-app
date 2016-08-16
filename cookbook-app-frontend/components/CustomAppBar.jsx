@@ -2,6 +2,7 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import {Link} from 'react-router';
 
 class CustomAppBar extends React.Component {
 
@@ -37,7 +38,11 @@ class CustomAppBar extends React.Component {
                 onRequestChange={(open) => this.setState({open})}>
                     {
                       this.props.options.map((option, i) => {
-                        return  <MenuItem key={i} onTouchTap={this.handleClose}>{option.action}</MenuItem>
+                        return  <MenuItem
+                                  key={i}
+                                  onTouchTap={this.handleClose}
+                                  containerElement={<Link to={option.path} />}
+                                  >{option.action}</MenuItem>
                       })
                     }
                 </Drawer>

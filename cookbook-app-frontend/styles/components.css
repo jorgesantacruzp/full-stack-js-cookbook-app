@@ -2,3 +2,8 @@
     background: #ff685c;
     font-family: 'Roboto', sans-serif;
 }
+
+.subHeaderSize{
+  font-size: 40px,
+  color:'hsl(0, 0%, 100%)'
+}
