@@ -1,5 +1,6 @@
 import express from 'express';
 import Recipe from './model/recipeModel';
+import Category from './model/categoryModel';
 var router = express.Router();
 
 import db from './mongoConfig';
@@ -28,6 +29,20 @@ router.route('/recipes/:recipeId')
                 res.status(500).send(err);
             else
                 res.json(recipe);
+        });
+    });
+
+router.route('/categories')
+    .get((req, res) => {
+        Category.find((err, category) => {
+            if (err)
+                res.status(500).send(err);
+            else
+                res.json({
+                    status: 'success',
+                    data: category,
+                    message: 'Retrieved all categories'
+                });
         });
     });
 
