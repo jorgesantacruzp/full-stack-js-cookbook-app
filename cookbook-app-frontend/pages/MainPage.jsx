@@ -9,7 +9,7 @@ class MainPage extends React.Component {
         super(props)
         this.state = {
             categories: [],
-            appTitle: "Recipes",
+            appTitle: "Avantica's Cookbook",
             gridTitle: "Categories",
             open: false,
             menuOptions: [
@@ -18,9 +18,9 @@ class MainPage extends React.Component {
                     "message": "You're gonna add",
                     "path": "add"
                 }, {
-                    "action": "Delete",
-                    "message": "You're gonna delete",
-                    "path": "delete"
+                    "action": "About",
+                    "message": "You're gonna about",
+                    "path": "about"
                 }
             ]
         }

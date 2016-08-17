@@ -19,7 +19,8 @@ const styles = {
     },
     subHeaderSize: {
         fontSize: 40,
-        color: 'hsl(0, 0%, 100%)'
+        color: 'hsl(0, 0%, 100%)',
+        marginTop: 12
     }
 };
 
