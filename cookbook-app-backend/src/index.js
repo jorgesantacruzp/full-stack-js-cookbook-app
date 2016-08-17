@@ -4,10 +4,10 @@ import multer from 'multer';
 import morgan from 'morgan';
 
 //postgres
-//import routes from './routes/postgre/categoriesRoute';
+import routes from './routes/postgre/categoriesRoute';
 
 //mongo
-import routes from './routes/mongo/recipesRoute';
+//import routes from './routes/mongo/recipesRoute';
 
 const app = express();
 const upload = multer();

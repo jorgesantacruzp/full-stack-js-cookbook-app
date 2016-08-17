@@ -23,7 +23,7 @@ router.route('/recipes')
     });
 
 router.route('/recipes/:recipeId')
-    .get(function(req, res) {
+    .get((req, res) => {
         Recipe.findById(req.params.recipeId, (err, recipe) => {
             if (err)
                 res.status(500).send(err);

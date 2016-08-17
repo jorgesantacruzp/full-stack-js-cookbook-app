@@ -10,7 +10,7 @@ var connectionString = 'postgres://jorgedbuser:jorgedbpwd@192.168.99.100:5432/co
 var db = pgp(connectionString);
 
 // add query functions
-function getRecipeCategories(req, res, next) {
+const getRecipeCategories = (req, res, next) => {
     db.any('select * from recipe_category')
         .then(data => {
             res.status(200)
@@ -25,10 +25,23 @@ function getRecipeCategories(req, res, next) {
         });
 }
 
+const getRecipes = (req, res, next) => {
+    console.log(req);
+    db.any('select * from recipe where idCategory = ' + req.params.idCategory)
+        .then(data => {
+          console.log(data);
+            res.status(200)
+                .json(data);
+        })
+        .catch(err => {
+            return next(err);
+        });
+}
+
 module.exports = {
-    getRecipeCategories: getRecipeCategories
-        //  getSinglePuppy: getSinglePuppy,
-        //  createPuppy: createPuppy,
-        // updatePuppy: updatePuppy,
-        //  removePuppy: removePuppy
+    getRecipeCategories: getRecipeCategories,
+    getRecipes: getRecipes,
+    //  createPuppy: createPuppy,
+    // updatePuppy: updatePuppy,
+    //  removePuppy: removePuppy
 };
