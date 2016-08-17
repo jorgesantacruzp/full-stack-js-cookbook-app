@@ -1,9 +1,9 @@
 import React from 'react';
-
 import {GridList, GridTile} from 'material-ui/GridList';
 import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import Search from 'material-ui/svg-icons/action/search';
+import {Link} from 'react-router';
 
 const styles = {
     root: {
@@ -17,14 +17,13 @@ const styles = {
         overflowY: 'auto',
         marginBottom: 24
     },
-    subHeaderSize:{
-      fontSize: 40,
-      color:'hsl(0, 0%, 100%)'
+    subHeaderSize: {
+        fontSize: 40,
+        color: 'hsl(0, 0%, 100%)'
     }
 };
 
 class CustomGridList extends React.Component {
-
     render() {
         return (
             <div style={styles.root}>
@@ -33,7 +32,8 @@ class CustomGridList extends React.Component {
                     {this.props.listado.map((tile) => (
                         <GridTile key={tile.id} title={tile.name}
                             actionIcon={
-                              < IconButton >
+                              < IconButton
+                              containerElement={<Link to={tile.name.toLowerCase()} />}>
                               <Search color="white"/>
                               < /IconButton>
                             }>
