@@ -5,39 +5,17 @@ import Subheader from 'material-ui/Subheader';
 import Search from 'material-ui/svg-icons/action/search';
 import {Link} from 'react-router';
 
-const styles = {
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around'
-    },
-    gridList: {
-        width: 500,
-        height: 500,
-        overflowY: 'auto',
-        marginBottom: 24
-    },
-    subHeaderSize: {
-        fontSize: 40,
-        color: 'hsl(0, 0%, 100%)',
-        marginTop: 12
-    }
-};
-
 class CustomGridList extends React.Component {
     render() {
         return (
-            <div style={styles.root}>
-                <GridList cellHeight={200} style={styles.gridList}>
-                    <Subheader style={styles.subHeaderSize}>{this.props.title}</Subheader>
+            <div className="root">
+                <GridList cellHeight={200} className="gridList">
+                    <Subheader className="subHeaderSize">{this.props.title}</Subheader>
                     {this.props.listado.map((tile) => (
-                        <GridTile key={tile.id} title={tile.name}
-                            actionIcon={
-                              < IconButton
-                              containerElement={<Link to={tile.name.toLowerCase()} />}>
-                              <Search color="white"/>
-                              < /IconButton>
-                            }>
+                        <GridTile key={tile.id} title={tile.name} actionIcon={< IconButton containerElement = { < Link to = {
+                                tile.name.toLowerCase()
+                            } />
+                        } > <Search color="white"/> < /IconButton>}>
                             <img src={tile.img}/>
                         </GridTile>
                     ))}
