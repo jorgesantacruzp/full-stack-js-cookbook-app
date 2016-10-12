@@ -1,14 +1,38 @@
 import React from 'react';
 
-import CustomGridList from '../components/GridList.jsx';
-import CustomAppBar from '../components/CustomAppBar.jsx';
+//import CustomGridList from '../components/GridList.jsx';
+//import CustomAppBar from '../components/CustomAppBar.jsx';
+
+import CustomGridList from 'cookbook-app-react-components/transpiledComponents/GridList';
+import CustomAppBar from 'cookbook-app-react-components/transpiledComponents/CustomAppBar';
 
 class MainPage extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            categories: [],
+            categories: [
+                {
+                    "id": 1,
+                    "name": "Desserts",
+                    "img": '../images/grid-list/desserts.jpg'
+                },
+                {
+                    "id": 2,
+                    "name": "Meat",
+                    "img": '../images/grid-list/meat.jpg'
+                },
+                {
+                    "id": 3,
+                    "name": "Pastas",
+                    "img": '../images/grid-list/pastas.jpg'
+                },
+                {
+                    "id": 4,
+                    "name": "Saladas",
+                    "img": '../images/grid-list/salads.jpg'
+                }
+            ],
             appTitle: "Avantica's Cookbook",
             gridTitle: "Categories",
             open: false,
@@ -26,7 +50,7 @@ class MainPage extends React.Component {
         }
     }
 
-    componentWillMount() {
+    /*componentWillMount() {
         const addPathImage = array => array.map(item => {
             return {
                 ...item,
@@ -41,7 +65,7 @@ class MainPage extends React.Component {
                 categories: addPathImage(categories.data)
             })
         })
-    }
+    }*/
 
     handleClick = () => this.setState({
         open: !this.state.open
