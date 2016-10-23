@@ -1,7 +1,7 @@
 import promise from 'bluebird';
 
 var options = {
-    // Initialization Options eee
+    // Initialization Options
     promiseLib: promise
 };
 
