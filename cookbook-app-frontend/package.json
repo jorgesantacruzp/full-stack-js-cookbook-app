@@ -1,10 +1,14 @@
 {
   "name": "cookbook-app-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Frontend of cookbook app",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgesantacruzp/full-stack-js-cookbook-app.git"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +17,7 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
+    "cookbook-app-react-components": "^1.0.6",
     "material-ui": "^0.15.4",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",

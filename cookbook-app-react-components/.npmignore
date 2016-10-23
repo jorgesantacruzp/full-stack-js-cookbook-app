@@ -1,0 +1,4 @@
+.babelrc
+components/*
+*.jsx
+.npmignore
